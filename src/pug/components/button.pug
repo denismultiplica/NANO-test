@@ -1,0 +1,24 @@
+- var themeSettings = 'inline-flex items-center justify-center duration-300 font-bold align-middle space-x-3 disabled:text-white/50 disabled:fill-white/50 disabled:pointer-events-none group';
+- var themeDefault = 'text-white fill-white'
+- var themePrimary = 'text-accent fill-accent'
+
+mixin button(btn, theme, href, text, icon, iconPosition, iconClass)
+  if theme === 'primary'
+    - var classlist = themeSettings + ' ' + themePrimary
+  else
+    - var classlist = themeSettings + ' ' + themeDefault
+
+  if btn === 'a'
+    #{btn}(href=href class=classlist)&attributes(attributes)
+      if iconPosition === 'left' && icon
+        svg.w-5(viewBox='0 0 24 24' class=iconClass)!=icon
+      span=text
+      if iconPosition === 'right' && icon
+        svg.w-5(viewBox='0 0 24 24' class=iconClass)!=icon
+  else
+    #{btn}(class=classlist)&attributes(attributes)
+      if iconPosition === 'left' && icon
+        svg.w-5(viewBox='0 0 24 24' class=iconClass)!=icon
+      span=text
+      if iconPosition === 'right' && icon
+        svg.w-5(viewBox='0 0 24 24' class=iconClass)!=icon

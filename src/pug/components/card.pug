@@ -1,0 +1,16 @@
+mixin card(title, subtitle, text, image, order, direction)
+  .grid.grid-cols-8.gap-x-20.items-center
+    .col-span-5(class=direction)
+      .relative.pl-32
+        span.absolute.text-10xl.left-0.font-bold.js-fade-in-up(class='-top-20 text-white/10')=order
+        article.relative.space-y-5
+          .flex.items-center.space-x-6.js-fade-in-up
+            .w-16.bg-accent(class='h-0.5')
+            span.font-bold.uppercase.text-accent.tracking-widest=subtitle
+          h2.font-serif.font-medium.text-5xl.text-white.js-fade-in-up=title
+          p.text-white.js-fade-in-up!=text
+          .js-fade-in-up
+            +button('a', 'primary', '#', 'read more', arrowRight, 'right', 'transition-transform duration-300 translate group-hover:translate-x-2')
+    .col-span-3
+      figure.overflow-hidden(class='aspect-[5/7]')
+        img.w-full.h-full.object-cover.js-slide-right(src=image alt=title)

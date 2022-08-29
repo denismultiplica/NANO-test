@@ -1,0 +1,18 @@
+include ./components/card.pug
+include ./components/button.pug
+include ./components/icons.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title NANO
+  body
+    include ./includes/transition.pug
+    include ./includes/header.pug
+
+    main
+      include ./components/hero.pug
+
+    include ./includes/footer.pug

@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Medium.eot');
+  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Gilroy-Medium.woff') format('woff'),
+    url('../assets/fonts/Gilroy-Medium.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Medium.svg#Gilroy') format('svg'),
+    url('../assets/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Bold.eot');
+  src: url('../assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Gilroy-Bold.woff') format('woff'),
+    url('../assets/fonts/Gilroy-Bold.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Bold.svg#Gilroy') format('svg'),
+    url('../assets/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chronicle';
+  src: url('../assets/fonts/Chronicle-Semibold.eot');
+  src: url('../assets/fonts/Chronicle-Semibold.woff2') format('woff2'),
+    url('../assets/fonts/Chronicle-Semibold.woff') format('woff'),
+    url('../assets/fonts/Chronicle-Semibold.ttf') format('truetype'),
+    url('../assets/fonts/Chronicle-Semibold.svg#Chronicle') format('svg'),
+    url('../assets/fonts/Chronicle-Semibold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply text-dark}
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.start-gradient {
+  background: linear-gradient(330.24deg, rgba(var(--color-dark), 0.1) 31.06%, rgb(var(--color-dark)) 108.93%);;
+}
+
+.start-gradient-two {
+  background: linear-gradient(180deg, rgba(var(--color-dark), 0) 0%, rgb(var(--color-dark)) 45%);
+}

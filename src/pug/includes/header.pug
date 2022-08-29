@@ -1,0 +1,35 @@
+include ../components/icons.pug
+
+header.relative
+  a.js-logo.fill-primary.absolute.top-8.left-5.z-50(href='/')
+    svg.w-20(class='lg:w-32' viewBox='0 0 401 153')!=logo
+  .fixed.inset-y-0.right-0.bg-primary.transition-all.duration-300.cursor-pointer.flex.justify-center.items-center.z-40.group(class='w-2.5 hover:w-8 lg:hover:w-10')
+    button.js-hamburguer.w-full.h-full.flex.justify-center.items-center.opacity-0.transition.duration-300(class='group-hover:opacity-100')
+      svg.fill-dark(class='w-2.5' viewBox='0 0 9 10' fill='none')!=hamburguer
+  nav.js-nav.fixed.inset-0.z-50.hidden
+    .js-nav-backdrop.absolute.inset-0(class='bg-black/10')
+    .js-nav-wrapper.absolute.top-0.right-0.w-80.h-full.bg-warm.py-8.px-5(class='lg:w-96 lg:px-10')
+      .flex.justify-end
+        buttom.js-nav-close.cursor-pointer
+          svg.w-8.h-8.fill-dark.transition.duration-300(class='hover:fill-primary hover:rotate-90' viewBox='0 0 33 33' fill='none')!=close
+      .js-nav-content.h-full.flex.flex-col.justify-between.pb-8
+        ul.h-full.flex.flex-col.justify-center.items-center.space-y-12
+          li.w-full
+            a.block.border-t.text-3xl.uppercase.font-light.transition.duration-300(class='pt-2.5 border-dark/20 hover:text-primary hover:border-primary/20' href='projects.html') Projects
+          li.w-full
+            a.block.border-t.text-3xl.uppercase.font-light.transition.duration-300(class='pt-2.5 border-dark/20 hover:text-primary hover:border-primary/20' href='about.html') About
+          li.w-full
+            a.block.border-t.text-3xl.uppercase.font-light.transition.duration-300(class='pt-2.5 border-dark/20 hover:text-primary hover:border-primary/20' href='people.html') People
+          li.w-full
+            a.block.border-t.text-3xl.uppercase.font-light.transition.duration-300(class='pt-2.5 border-dark/20 hover:text-primary hover:border-primary/20' href='journal.html') Journal
+        ul.flex.justify-end(class='space-x-2.5')
+          li
+            a(href='#' target='_blank')
+              svg.w-8.h-8.fill-dark.transition.duration-300(class='hover:fill-primary' viewBox='0 0 33 33' fill='none')!=close
+          li
+            a(href='#' target='_blank')
+              svg.w-8.h-8.fill-dark.transition.duration-300(class='hover:fill-primary' viewBox='0 0 33 33' fill='none')!=close
+          li
+            a(href='#' target='_blank')
+              svg.w-8.h-8.fill-dark.transition.duration-300(class='hover:fill-primary' viewBox='0 0 33 33' fill='none')!=close
+
